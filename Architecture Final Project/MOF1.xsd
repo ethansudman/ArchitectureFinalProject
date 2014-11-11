@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:import namespace="http://www.omg.org/spec/XMI/20110701" schemaLocation="MOF.xsd"/>
+	<xs:complexType name="T6_ownedOperation">
+		<xs:sequence>
+			<xs:element name="ownedParameter" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="type">
+							<xs:complexType>
+								<xs:attribute name="href" type="xs:anyURI"/>
+								<xs:attribute ref="xmi:idref"/>
+							</xs:complexType>
+						</xs:element>
+						<xs:sequence minOccurs="0">
+							<xs:element name="upperValue" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute ref="xmi:type" use="required"/>
+									<xs:attribute name="value" use="required" type="xs:string"/>
+									<xs:attribute ref="xmi:id" use="required"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="lowerValue">
+								<xs:complexType>
+									<xs:attribute ref="xmi:type" use="required"/>
+									<xs:attribute ref="xmi:id" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:sequence>
+					<xs:attribute ref="xmi:type" use="required"/>
+					<xs:attribute name="name" use="required" type="xs:string"/>
+					<xs:attribute name="visibility" use="required" type="xs:string"/>
+					<xs:attribute name="direction" type="xs:string"/>
+					<xs:attribute ref="xmi:id" use="required"/>
+					<xs:attribute name="isStream" type="xs:boolean"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute ref="xmi:type" use="required"/>
+		<xs:attribute name="name" use="required" type="xs:string"/>
+		<xs:attribute name="visibility" use="required" type="xs:string"/>
+		<xs:attribute name="isQuery" type="xs:boolean"/>
+		<xs:attribute ref="xmi:id" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="T6_ownedAttribute">
+		<xs:choice>
+			<xs:sequence>
+				<xs:element name="type" type="T11_type"/>
+				<xs:sequence minOccurs="0">
+					<xs:element name="association" type="T11_association"/>
+					<xs:sequence minOccurs="0">
+						<xs:element name="upperValue">
+							<xs:complexType>
+								<xs:attribute ref="xmi:type" use="required"/>
+								<xs:attribute name="value" use="required" type="xs:string"/>
+								<xs:attribute ref="xmi:id" use="required"/>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="lowerValue" type="T11_lowerValue"/>
+					</xs:sequence>
+				</xs:sequence>
+			</xs:sequence>
+			<xs:sequence>
+				<xs:element name="association" type="T11_association"/>
+				<xs:element name="type" type="T11_type"/>
+				<xs:sequence minOccurs="0">
+					<xs:element name="subsettedProperty">
+						<xs:complexType>
+							<xs:attribute name="href" use="required" type="xs:anyURI"/>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="lowerValue" type="T11_lowerValue"/>
+				</xs:sequence>
+			</xs:sequence>
+		</xs:choice>
+		<xs:attribute ref="xmi:type" use="required"/>
+		<xs:attribute name="name" use="required" type="xs:string"/>
+		<xs:attribute name="visibility" use="required" type="xs:string"/>
+		<xs:attribute ref="xmi:id" use="required"/>
+		<xs:attribute name="isDerived" type="xs:boolean"/>
+	</xs:complexType>
+	<xs:complexType name="T4_packagedElement">
+		<xs:choice>
+			<xs:element name="ownedAttribute" maxOccurs="unbounded" type="T6_ownedAttribute"/>
+			<xs:element name="ownedOperation" maxOccurs="unbounded" type="T6_ownedOperation"/>
+			<xs:sequence>
+				<xs:element name="memberEnd" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:attribute ref="xmi:idref" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="navigableOwnedEnd" minOccurs="0">
+					<xs:complexType>
+						<xs:attribute ref="xmi:idref" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ownedEnd">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="type">
+								<xs:complexType>
+									<xs:attribute ref="xmi:idref" use="required"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="association">
+								<xs:complexType>
+									<xs:attribute ref="xmi:idref" use="required"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:sequence minOccurs="0">
+								<xs:element name="subsettedProperty" minOccurs="0">
+									<xs:complexType>
+										<xs:attribute name="href" use="required" type="xs:anyURI"/>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="upperValue">
+									<xs:complexType>
+										<xs:attribute ref="xmi:type" use="required"/>
+										<xs:attribute name="value" use="required" type="xs:string"/>
+										<xs:attribute ref="xmi:id" use="required"/>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="lowerValue">
+									<xs:complexType>
+										<xs:attribute ref="xmi:type" use="required"/>
+										<xs:attribute ref="xmi:id" use="required"/>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:sequence>
+						<xs:attribute ref="xmi:type" use="required"/>
+						<xs:attribute name="name" use="required" type="xs:string"/>
+						<xs:attribute name="visibility" use="required" type="xs:string"/>
+						<xs:attribute name="aggregation" type="xs:string"/>
+						<xs:attribute ref="xmi:id" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:sequence>
+				<xs:element name="generalization">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="general">
+								<xs:complexType>
+									<xs:attribute ref="xmi:idref"/>
+									<xs:attribute name="href" type="xs:anyURI"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute ref="xmi:type" use="required"/>
+						<xs:attribute ref="xmi:id" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:choice>
+					<xs:element name="ownedOperation" maxOccurs="unbounded" type="T6_ownedOperation"/>
+					<xs:sequence>
+						<xs:element name="ownedAttribute" maxOccurs="unbounded" type="T6_ownedAttribute"/>
+						<xs:element name="ownedOperation" minOccurs="0" maxOccurs="unbounded" type="T6_ownedOperation"/>
+					</xs:sequence>
+				</xs:choice>
+			</xs:sequence>
+		</xs:choice>
+		<xs:attribute ref="xmi:type" use="required"/>
+		<xs:attribute name="name" use="required" type="xs:string"/>
+		<xs:attribute ref="xmi:id" use="required"/>
+		<xs:attribute name="isAbstract" type="xs:boolean"/>
+	</xs:complexType>
+	<xs:complexType name="T4_packageMerge">
+		<xs:sequence>
+			<xs:element name="mergedPackage">
+				<xs:complexType>
+					<xs:attribute ref="xmi:idref"/>
+					<xs:attribute name="href" type="xs:anyURI"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute ref="xmi:type" use="required"/>
+		<xs:attribute ref="xmi:id" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="T11_type">
+		<xs:attribute name="href" type="xs:anyURI"/>
+		<xs:attribute ref="xmi:idref"/>
+	</xs:complexType>
+	<xs:complexType name="T11_lowerValue">
+		<xs:attribute ref="xmi:type" use="required"/>
+		<xs:attribute name="value" type="xs:byte"/>
+		<xs:attribute ref="xmi:id" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="T11_association">
+		<xs:attribute ref="xmi:idref" use="required"/>
+	</xs:complexType>
+</xs:schema>

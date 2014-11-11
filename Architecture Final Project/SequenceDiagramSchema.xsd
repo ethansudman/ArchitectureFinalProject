@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CommentsSchema"
+    targetNamespace="http://tempuri.org/CommentsSchema.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/CommentsSchema.xsd"
+    xmlns:mstns="http://tempuri.org/CommentsSchema.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+> 
+  <xs:complexType name="parameterType">
+    <xs:attribute name="name" type="xs:string" use="required"/>
+    <xs:attribute name="type" type="xs:string" use="required"/>
+    <xs:attribute name="classReference" type="xs:string" use="optional"/>
+    <!-- TODO: other choices (simple type, etc.) -->
+  </xs:complexType>
+
+  <xs:complexType name="sequenceType">
+    <xs:choice>
+      <xs:element minOccurs="1" maxOccurs="unbounded" name="step">
+        <xs:complexType>
+          <!-- This really is a choice, or it might be - right now there's only one choice but there could be more in the future -->
+          <xs:choice minOccurs="0">
+            <xs:element name="parameters" maxOccurs="1">
+              <xs:complexType>
+                <!-- Just one "choice" here -->
+                <xs:choice minOccurs="1" maxOccurs="unbounded">
+                  <xs:element name="parameter" type="parameterType"/>
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+          <xs:attribute name="number" type="xs:int" use="required"/>
+          <xs:attribute name="callingClass" use="required" type="xs:string"/>
+          <xs:attribute name="targetClass" use="required" type="xs:string"/>
+          <xs:attribute name="returnType" use="required" type="xs:string"/>
+          
+          <!-- Enum -->
+          <xs:attribute name="stepType" use="optional" default="call">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:enumeration value="call"/>
+                <xs:enumeration value="return"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+    </xs:choice>
+  </xs:complexType>
+  
+  <xs:element name="comments">
+    <xs:complexType>
+      <!-- Not exactly a choice - only one possible child element -->
+      <xs:choice>
+        <xs:element type="sequenceType" name="step"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

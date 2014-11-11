@@ -1,0 +1,13 @@
+E:\My Documents\Visual Studio 2012\Projects\Architecture Final Project\Requirements Application\bin\Debug\Requirements Application.exe.config
+E:\My Documents\Visual Studio 2012\Projects\Architecture Final Project\Requirements Application\bin\Debug\Requirements Application.exe
+E:\My Documents\Visual Studio 2012\Projects\Architecture Final Project\Requirements Application\bin\Debug\Requirements Application.pdb
+E:\My Documents\Visual Studio 2012\Projects\Architecture Final Project\Requirements Application\obj\Debug\Requirements Application.csprojResolveAssemblyReference.cache
+E:\My Documents\Visual Studio 2012\Projects\Architecture Final Project\Requirements Application\obj\Debug\MainWindow.baml
+E:\My Documents\Visual Studio 2012\Projects\Architecture Final Project\Requirements Application\obj\Debug\MainWindow.g.cs
+E:\My Documents\Visual Studio 2012\Projects\Architecture Final Project\Requirements Application\obj\Debug\App.g.cs
+E:\My Documents\Visual Studio 2012\Projects\Architecture Final Project\Requirements Application\obj\Debug\Requirements Application_MarkupCompile.cache
+E:\My Documents\Visual Studio 2012\Projects\Architecture Final Project\Requirements Application\obj\Debug\Requirements Application.g.resources
+E:\My Documents\Visual Studio 2012\Projects\Architecture Final Project\Requirements Application\obj\Debug\Requirements_Application.Properties.Resources.resources
+E:\My Documents\Visual Studio 2012\Projects\Architecture Final Project\Requirements Application\obj\Debug\Requirements Application.csproj.GenerateResource.Cache
+E:\My Documents\Visual Studio 2012\Projects\Architecture Final Project\Requirements Application\obj\Debug\Requirements Application.exe
+E:\My Documents\Visual Studio 2012\Projects\Architecture Final Project\Requirements Application\obj\Debug\Requirements Application.pdb

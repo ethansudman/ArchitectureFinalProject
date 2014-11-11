@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources/>
+	<component name="defaultmap1" blackbox="0" uid="1" editable="1">
+		<properties SelectedLanguage="java"/>
+		<structure>
+			<children>
+				<component name="SequenceDiagramSchema" library="xml" uid="2" kind="14">
+					<properties/>
+					<view rbx="302" rby="432"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace uid="http://tempuri.org/CommentsSchema.xsd"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="comments" expanded="1">
+										<entry name="step" outkey="1" expanded="1">
+											<entry name="step" expanded="1">
+												<entry name="parameters" expanded="1">
+													<entry name="parameter" expanded="1"/>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\Architecture Final Project\SequenceDiagramSchema.xsd" outputinstance="..\Architecture Final Project\SequenceDiagramSchema.xml" instanceroot="{http://tempuri.org/CommentsSchema.xsd}comments"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="TestSequenceDiagram" library="xml" uid="3" kind="14">
+					<properties XSLTDefaultOutput="1"/>
+					<view ltx="497" rbx="882" rby="350"/>
+					<data>
+						<root scrollposition="245">
+							<header>
+								<namespaces>
+									<namespace uid="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="SequenceDesignerModel" expanded="1">
+										<entry name="packagedElements" expanded="1">
+											<entry name="packageHasNamedElement" expanded="1">
+												<entry name="executionEvent" expanded="1"/>
+												<entry name="interaction" inpkey="2" expanded="1">
+													<entry name="elementDefinition" expanded="1"/>
+													<entry name="fragments" expanded="1">
+														<entry name="behaviorExecutionSpecification" expanded="1"/>
+														<entry name="executionOccurrenceSpecification" expanded="1">
+															<entry name="event">
+																<entry name="executionOccurrenceSpecificationReferencesEvent" expanded="1">
+																	<entry name="executionEventMoniker" expanded="1"/>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="TestSequenceDiagram.xsd" outputinstance="TestSequenceDiagram.xml" instanceroot="{http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner}SequenceDesignerModel"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="1">
+						<edges>
+							<edge vertexkey="2" edgekey="3"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

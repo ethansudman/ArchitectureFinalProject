@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<comments xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="SequenceDiagramSchema.xsd">
+  <sequence>
+    <!-- See fig_53... to see what this looks like -->
+    <!-- Either "method" or "text" -->
+    <step number="1" callingClass="customer" targetClass="ATM" method="putInCard" returnType="void"/>
+    
+    <!-- The "parameters" tag here is for possible future expansion -->
+    <step number="2" callingClass="ATM" targetClass="Server" method="checkCard" returnType="bool">
+      <parameters>
+        <parameter name="cardsData" type="class" classReference="CardDataStruct"/>
+      </parameters>
+    </step>
+
+    <!-- Name: label for return. Type: type of return. -->
+    <step number="3" callingClass="server" targetClass="ATM" stepType="return" name="cardStatus" type="bool"/>
+
+    <step number="4" callingClass="ATM" targetClass="customer" stepType="return" name="cardPutIn" type="bool"/>
+  </sequence>
+</comments>

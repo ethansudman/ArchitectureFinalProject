@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+  dslVersion="1.0.0.0"
+  Id="5bdcc0e3-40d6-4a1c-b4b3-5c0fd3b1fac2"
+  name="Test Modeling Project" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <interaction
+        Id="33ce8069-2200-4e3a-9608-180f10ff3cb3"
+        name="TestSequenceDiagram"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <fragments>
+          <behaviorExecutionSpecification
+            Id="711b2d32-ed08-4852-9524-da94c9178725"
+            name="BehaviorExecutionSpecification1">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="3796a6ea-8084-4b06-879b-c30e692ad3bd"
+                LastKnownName="Lifeline1"
+                LastKnownLocation="Test Modeling Project.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="739f6320-a834-4389-afad-02d5c48cc09d"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="Test Modeling Project.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="55885ad9-ecd1-4f22-acfb-7e591ba8be90"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="Test Modeling Project.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="e5dc1032-f763-4449-a204-d7bb12071a5d"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="Test Modeling Project.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="db86ec3d-db77-458d-a7fa-5f3e3dec6183"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="Test Modeling Project.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="55885ad9-ecd1-4f22-acfb-7e591ba8be90"
+            name="ExecutionOccurrenceSpecification1">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="d0d35783-290d-4541-9acd-34c941fdbe79"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Test Modeling Project.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="3796a6ea-8084-4b06-879b-c30e692ad3bd"
+                LastKnownName="Lifeline1"
+                LastKnownLocation="Test Modeling Project.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="55fb198f-c129-4e1b-9e7a-a4a71452af65"
+            name="MessageOccurrenceSpecification1">
+            <covered>
+              <lifelineMoniker
+                Id="42d05f6c-35ab-4ea5-ba1e-33eadc187787"
+                LastKnownName="Lifeline2"
+                LastKnownLocation="Test Modeling Project.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e5dc1032-f763-4449-a204-d7bb12071a5d"
+            name="MessageOccurrenceSpecification2">
+            <covered>
+              <lifelineMoniker
+                Id="3796a6ea-8084-4b06-879b-c30e692ad3bd"
+                LastKnownName="Lifeline1"
+                LastKnownLocation="Test Modeling Project.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="db86ec3d-db77-458d-a7fa-5f3e3dec6183"
+            name="MessageOccurrenceSpecification3">
+            <covered>
+              <lifelineMoniker
+                Id="3796a6ea-8084-4b06-879b-c30e692ad3bd"
+                LastKnownName="Lifeline1"
+                LastKnownLocation="Test Modeling Project.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="a265ac45-2ebc-4a2e-803d-2f6064abdc0c"
+            name="MessageOccurrenceSpecification4">
+            <covered>
+              <lifelineMoniker
+                Id="42d05f6c-35ab-4ea5-ba1e-33eadc187787"
+                LastKnownName="Lifeline2"
+                LastKnownLocation="Test Modeling Project.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="739f6320-a834-4389-afad-02d5c48cc09d"
+            name="ExecutionOccurrenceSpecification2">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="a108f6c5-7f4e-48ff-aba8-e21a4429d5d7"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Test Modeling Project.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="3796a6ea-8084-4b06-879b-c30e692ad3bd"
+                LastKnownName="Lifeline1"
+                LastKnownLocation="Test Modeling Project.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline
+            Id="42d05f6c-35ab-4ea5-ba1e-33eadc187787"
+            name="Lifeline2"
+            isActor="false"
+            lifelineDisplayName="Lifeline2">
+            <represents>
+              <propertyMoniker
+                Id="a15252f4-9792-4147-b5cc-d2a5c7a2a259"
+                LastKnownLocation="Test Modeling Project.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="55fb198f-c129-4e1b-9e7a-a4a71452af65"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="Test Modeling Project.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="a265ac45-2ebc-4a2e-803d-2f6064abdc0c"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="Test Modeling Project.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="3796a6ea-8084-4b06-879b-c30e692ad3bd"
+            name="Lifeline1"
+            isActor="false"
+            lifelineDisplayName="Lifeline1">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="55885ad9-ecd1-4f22-acfb-7e591ba8be90"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="Test Modeling Project.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="739f6320-a834-4389-afad-02d5c48cc09d"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="Test Modeling Project.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message
+            Id="acf835cc-9045-4a71-a74c-56ca264bdafa"
+            name="SomeMessage"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="55fb198f-c129-4e1b-9e7a-a4a71452af65"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="Test Modeling Project.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="e5dc1032-f763-4449-a204-d7bb12071a5d"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="Test Modeling Project.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="f9ac888a-fda1-4906-b049-1c0cfb1c94a9"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="db86ec3d-db77-458d-a7fa-5f3e3dec6183"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="Test Modeling Project.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="a265ac45-2ebc-4a2e-803d-2f6064abdc0c"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="Test Modeling Project.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
+        <ownedAttributesInternal>
+          <property
+            Id="a15252f4-9792-4147-b5cc-d2a5c7a2a259"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="5d1c74aa-c104-47fc-b475-c8904789add1"
+                LastKnownName="Lifeline2"
+                LastKnownLocation="Test Modeling Project.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="5d1c74aa-c104-47fc-b475-c8904789add1"
+        name="Lifeline2"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="d0d35783-290d-4541-9acd-34c941fdbe79"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="a108f6c5-7f4e-48ff-aba8-e21a4429d5d7"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>
