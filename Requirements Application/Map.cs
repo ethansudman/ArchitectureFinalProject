@@ -13,5 +13,18 @@ namespace Requirements_Application
         public string Tool { get; set; }
 
         public bool FullyFulfills { get; set; }
+
+        /// <summary>
+        /// Factory to get a <see cref="Connection"/> to the underlying provider
+        /// </summary>
+        /// <returns></returns>
+        abstract protected Connection ConnectToTool();
+
+        public virtual bool Check()
+        {
+            var connection = ConnectToTool();
+
+            connection.Query();
+        }
     }
 }
