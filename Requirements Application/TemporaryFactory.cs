@@ -15,8 +15,11 @@ namespace Requirements_Application
 
             switch (provider.Trim().ToLower())
             {
-                case "Access":
-                    break;
+                case "access":
+                    return new AccessProvider();
+
+                case "excel":
+                    return new ExcelProvider();
 
                 default:
                     throw new ArgumentException("Not a known provider");
