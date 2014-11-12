@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Requirements_Application
 {
-    class XmlProvider
+    public class XmlProvider// : Map
     {
     }
 }
