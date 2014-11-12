@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Requirements_Application
 {
+    /// <summary>
+    /// Provider for an Excel spreadsheet
+    /// </summary>
     public class ExcelProvider : Map
     {
+        public override string ToolName
+        {
+            get { throw new NotImplementedException(); }
+        }
     }
 }
