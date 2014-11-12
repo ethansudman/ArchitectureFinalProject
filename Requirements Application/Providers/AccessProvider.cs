@@ -18,11 +18,6 @@ namespace Requirements_Application
             return new OleDbConnection(connStr);
         }
 
-        protected override Connection ConnectToTool()
-        {
-            throw new NotImplementedException();
-        }
-
         public override string Name
         {
             get
