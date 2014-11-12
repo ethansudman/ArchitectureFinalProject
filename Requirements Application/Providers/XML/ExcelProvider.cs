@@ -31,11 +31,12 @@ namespace Requirements_Application
 
             for (int i = 1; i < sheet.Rows.Count; i++)
             {
+                // Obviously I'm making some assumptions about what the file will look like here
                 var range = sheet.Rows[i, 0] as Range;
                 if (range.Value2.Trim().Equals(RequirementNumber.ToString()))
                 {
                     _name = sheet.Rows[i, 1];
-                    _name = sheet.Rows[i, 2];
+                    _desc = sheet.Rows[i, 2];
                     break;
                 }
 
