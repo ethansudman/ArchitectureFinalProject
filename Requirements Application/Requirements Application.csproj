@@ -56,6 +56,7 @@
     </ApplicationDefinition>
     <Compile Include="Connection.cs" />
     <Compile Include="Connections\AccessConnection.cs" />
+    <Compile Include="ITextProducer.cs" />
     <Compile Include="Providers\ExcelProvider.cs" />
     <Compile Include="IImageProducer.cs" />
     <Compile Include="Providers\AccessProvider.cs" />
@@ -100,6 +101,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database1.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
