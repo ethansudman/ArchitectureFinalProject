@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.omg.org/spec/MOF/20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:import namespace="http://www.omg.org/spec/XMI/20110701" schemaLocation="MOF.xsd"/>
+	<xs:element name="Tag">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="element">
+					<xs:complexType>
+						<xs:attribute ref="xmi:idref" use="required"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute ref="xmi:type" use="required"/>
+			<xs:attribute ref="xmi:id" use="required"/>
+			<xs:attribute name="name" use="required" type="xs:string"/>
+			<xs:attribute name="value" use="required" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

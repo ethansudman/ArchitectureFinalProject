@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" elementFormDefault="qualified" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:complexType name="T9_executionOccurrenceSpecification">
+		<xs:sequence>
+			<xs:element name="elementDefinition">
+				<xs:complexType>
+					<xs:attribute name="Id" use="required" type="xs:string"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="event">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="executionOccurrenceSpecificationReferencesEvent">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="executionEventMoniker">
+										<xs:complexType>
+											<xs:attribute name="Id" use="required" type="xs:string"/>
+											<xs:attribute name="LastKnownName" use="required" type="xs:string"/>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="covered">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="lifelineMoniker">
+							<xs:complexType>
+								<xs:attribute name="Id" use="required" type="xs:string"/>
+								<xs:attribute name="LastKnownName" use="required" type="xs:string"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="Id" use="required" type="xs:string"/>
+		<xs:attribute name="name" use="required" type="xs:string"/>
+	</xs:complexType>
+	<xs:element name="SequenceDesignerModel">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="profileInstances">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="packageHasProfileInstances" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="profileInstance">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="elementDefinition">
+														<xs:complexType>
+															<xs:attribute name="Id" use="required" type="xs:string"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="Id" use="required" type="xs:string"/>
+												<xs:attribute name="name" use="required" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="elementDefinition">
+											<xs:complexType>
+												<xs:attribute name="Id" use="required" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="Id" use="required" type="xs:string"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="packagedElements">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="packageHasNamedElement" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:choice>
+										<xs:element name="executionEvent">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="elementDefinition">
+														<xs:complexType>
+															<xs:attribute name="Id" use="required" type="xs:string"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="Id" use="required" type="xs:string"/>
+												<xs:attribute name="name" use="required" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="interaction">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="elementDefinition">
+														<xs:complexType>
+															<xs:attribute name="Id" use="required" type="xs:string"/>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="fragments">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="behaviorExecutionSpecification">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="elementDefinition">
+																				<xs:complexType>
+																					<xs:attribute name="Id" use="required" type="xs:string"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element name="coveredLifelines">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element name="lifelineMoniker">
+																							<xs:complexType>
+																								<xs:attribute name="Id" use="required" type="xs:string"/>
+																								<xs:attribute name="LastKnownName" use="required" type="xs:string"/>
+																							</xs:complexType>
+																						</xs:element>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element name="finish">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element name="executionOccurrenceSpecificationMoniker">
+																							<xs:complexType>
+																								<xs:attribute name="Id" use="required" type="xs:string"/>
+																								<xs:attribute name="LastKnownName" use="required" type="xs:string"/>
+																							</xs:complexType>
+																						</xs:element>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element name="start">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element name="executionOccurrenceSpecificationMoniker">
+																							<xs:complexType>
+																								<xs:attribute name="Id" use="required" type="xs:string"/>
+																								<xs:attribute name="LastKnownName" use="required" type="xs:string"/>
+																							</xs:complexType>
+																						</xs:element>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element name="nestedOccurrences">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element name="messageOccurrenceSpecificationMoniker" maxOccurs="unbounded">
+																							<xs:complexType>
+																								<xs:attribute name="Id" use="required" type="xs:string"/>
+																								<xs:attribute name="LastKnownName" use="required" type="xs:string"/>
+																							</xs:complexType>
+																						</xs:element>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																		<xs:attribute name="Id" use="required" type="xs:string"/>
+																		<xs:attribute name="name" use="required" type="xs:string"/>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="executionOccurrenceSpecification" type="T9_executionOccurrenceSpecification"/>
+																<xs:element name="messageOccurrenceSpecification" maxOccurs="unbounded">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="elementDefinition">
+																				<xs:complexType>
+																					<xs:attribute name="Id" use="required" type="xs:string"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element name="covered">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element name="lifelineMoniker">
+																							<xs:complexType>
+																								<xs:attribute name="Id" use="required" type="xs:string"/>
+																								<xs:attribute name="LastKnownName" use="required" type="xs:string"/>
+																							</xs:complexType>
+																						</xs:element>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																		<xs:attribute name="Id" use="required" type="xs:string"/>
+																		<xs:attribute name="name" use="required" type="xs:string"/>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="executionOccurrenceSpecification" type="T9_executionOccurrenceSpecification"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="lifelines">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="lifeline" maxOccurs="unbounded">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="elementDefinition">
+																				<xs:complexType>
+																					<xs:attribute name="Id" use="required" type="xs:string"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element name="represents" minOccurs="0">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element name="propertyMoniker">
+																							<xs:complexType>
+																								<xs:attribute name="Id" use="required" type="xs:string"/>
+																							</xs:complexType>
+																						</xs:element>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element name="topLevelOccurrences">
+																				<xs:complexType>
+																					<xs:choice>
+																						<xs:element name="executionOccurrenceSpecificationMoniker" maxOccurs="unbounded">
+																							<xs:complexType>
+																								<xs:attribute name="Id" use="required" type="xs:string"/>
+																								<xs:attribute name="LastKnownName" use="required" type="xs:string"/>
+																							</xs:complexType>
+																						</xs:element>
+																						<xs:element name="messageOccurrenceSpecificationMoniker" maxOccurs="unbounded">
+																							<xs:complexType>
+																								<xs:attribute name="Id" use="required" type="xs:string"/>
+																								<xs:attribute name="LastKnownName" use="required" type="xs:string"/>
+																							</xs:complexType>
+																						</xs:element>
+																					</xs:choice>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																		<xs:attribute name="Id" use="required" type="xs:string"/>
+																		<xs:attribute name="name" use="required" type="xs:string"/>
+																		<xs:attribute name="isActor" use="required" type="xs:boolean"/>
+																		<xs:attribute name="lifelineDisplayName" use="required" type="xs:string"/>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="messages">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="message" maxOccurs="unbounded">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="elementDefinition">
+																				<xs:complexType>
+																					<xs:attribute name="Id" use="required" type="xs:string"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element name="sendEvent">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element name="messageOccurrenceSpecificationMoniker">
+																							<xs:complexType>
+																								<xs:attribute name="Id" use="required" type="xs:string"/>
+																								<xs:attribute name="LastKnownName" use="required" type="xs:string"/>
+																							</xs:complexType>
+																						</xs:element>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element name="receiveEvent">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element name="messageOccurrenceSpecificationMoniker">
+																							<xs:complexType>
+																								<xs:attribute name="Id" use="required" type="xs:string"/>
+																								<xs:attribute name="LastKnownName" use="required" type="xs:string"/>
+																							</xs:complexType>
+																						</xs:element>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																		<xs:attribute name="Id" use="required" type="xs:string"/>
+																		<xs:attribute name="name" use="required" type="xs:string"/>
+																		<xs:attribute name="messageKind" use="required" type="xs:string"/>
+																		<xs:attribute name="messageSort" use="required" type="xs:string"/>
+																		<xs:attribute name="createSelfMessage" use="required" type="xs:boolean"/>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="ownedAttributesInternal">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="property">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="elementDefinition">
+																				<xs:complexType>
+																					<xs:attribute name="Id" use="required" type="xs:string"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element name="type_NamedElement">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element name="referencedTypeMoniker">
+																							<xs:complexType>
+																								<xs:attribute name="Id" use="required" type="xs:string"/>
+																								<xs:attribute name="LastKnownName" use="required" type="xs:string"/>
+																							</xs:complexType>
+																						</xs:element>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																		<xs:attribute name="Id" use="required" type="xs:string"/>
+																		<xs:attribute name="isLeaf" use="required" type="xs:boolean"/>
+																		<xs:attribute name="isStatic" use="required" type="xs:boolean"/>
+																		<xs:attribute name="isReadOnly" use="required" type="xs:boolean"/>
+																		<xs:attribute name="isDerived" use="required" type="xs:boolean"/>
+																		<xs:attribute name="isDerivedUnion" use="required" type="xs:boolean"/>
+																		<xs:attribute name="aggregation" use="required" type="xs:string"/>
+																		<xs:attribute name="isComposite" use="required" type="xs:boolean"/>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="Id" use="required" type="xs:string"/>
+												<xs:attribute name="name" use="required" type="xs:string"/>
+												<xs:attribute name="collapseFragmentsFlag" use="required" type="xs:boolean"/>
+												<xs:attribute name="isActiveClass" use="required" type="xs:boolean"/>
+												<xs:attribute name="isAbstract" use="required" type="xs:boolean"/>
+												<xs:attribute name="isLeaf" use="required" type="xs:boolean"/>
+												<xs:attribute name="isReentrant" use="required" type="xs:boolean"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="referencedType">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="elementDefinition">
+														<xs:complexType>
+															<xs:attribute name="Id" use="required" type="xs:string"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="Id" use="required" type="xs:string"/>
+												<xs:attribute name="name" use="required" type="xs:string"/>
+												<xs:attribute name="isAbstract" use="required" type="xs:boolean"/>
+												<xs:attribute name="isLeaf" use="required" type="xs:boolean"/>
+												<xs:attribute name="cachedFullName" use="required" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:choice>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="package">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="elementDefinition">
+								<xs:complexType>
+									<xs:attribute name="Id" use="required" type="xs:string"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="Id" use="required" type="xs:string"/>
+						<xs:attribute name="name" use="required" type="xs:string"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="dslVersion" use="required" type="xs:string"/>
+			<xs:attribute name="Id" use="required" type="xs:string"/>
+			<xs:attribute name="name" use="required" type="xs:string"/>
+			<xs:attribute name="linkedPackageId" use="required" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

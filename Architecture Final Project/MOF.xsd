@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.omg.org/spec/XMI/20110701" xmlns:mofext="http://www.omg.org/spec/MOF/20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:import namespace="http://www.omg.org/spec/MOF/20110701" schemaLocation="MOF2.xsd"/>
+	<xs:import schemaLocation="MOF1.xsd"/>
+	<xs:attribute name="type" type="xs:string"/>
+	<xs:attribute name="idref" type="xs:string"/>
+	<xs:attribute name="id" type="xs:string"/>
+	<xs:element name="XMI">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="packagedElement">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="packagedElement" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:choice>
+										<xs:sequence>
+											<xs:element name="packageMerge" maxOccurs="unbounded" type="T4_packageMerge"/>
+											<xs:element name="packagedElement" minOccurs="0" maxOccurs="unbounded" type="T4_packagedElement"/>
+										</xs:sequence>
+										<xs:sequence>
+											<xs:element name="packageImport">
+												<xs:complexType>
+													<xs:sequence>
+														<xs:element name="importedPackage">
+															<xs:complexType>
+																<xs:attribute ref="xmi:idref"/>
+																<xs:attribute name="href" type="xs:anyURI"/>
+															</xs:complexType>
+														</xs:element>
+													</xs:sequence>
+													<xs:attribute ref="xmi:type" use="required"/>
+													<xs:attribute ref="xmi:id" use="required"/>
+												</xs:complexType>
+											</xs:element>
+											<xs:element name="packageMerge" minOccurs="0" type="T4_packageMerge"/>
+											<xs:element name="packagedElement" maxOccurs="unbounded" type="T4_packagedElement"/>
+										</xs:sequence>
+									</xs:choice>
+									<xs:attribute ref="xmi:type" use="required"/>
+									<xs:attribute name="name" use="required" type="xs:string"/>
+									<xs:attribute ref="xmi:id" use="required"/>
+									<xs:attribute name="URI" type="xs:anyURI"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute ref="xmi:type" use="required"/>
+						<xs:attribute ref="xmi:id" use="required"/>
+						<xs:attribute name="name" use="required" type="xs:string"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element ref="mofext:Tag" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

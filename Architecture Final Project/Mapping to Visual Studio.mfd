@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources/>
+	<component name="defaultmap1" blackbox="0" uid="1" editable="1">
+		<properties SelectedLanguage="java"/>
+		<structure>
+			<children>
+				<component name="XMI" library="xml" uid="3" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="920" lty="425" rbx="1070" rby="625"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://www.omg.org/spec/XMI/20110701"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="XMI" expanded="1"/>
+								</entry>
+							</entry>
+						</root>
+						<document schema="XMI.xsd" inputinstance="XMI-model.xml" outputinstance="XMI-model.xml" instanceroot="{http://www.omg.org/spec/XMI/20110701}XMI"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="XMI-model" library="xml" uid="5" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="1125" lty="159" rbx="1275" rby="359"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://www.omg.org/spec/UML/20110701"/>
+									<namespace uid="http://www.omg.org/spec/XMI/20110701"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="2" expanded="1">
+								<entry name="document" ns="2" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="XMI" ns="1" expanded="1">
+										<entry name="Package" expanded="1"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="XMI-model.xsd" inputinstance="XMI-model.xml" outputinstance="XMI-model.xml" instanceroot="{http://www.omg.org/spec/XMI/20110701}XMI"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="MOF" library="xml" uid="6" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="285" lty="507" rbx="708" rby="1056"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.omg.org/spec/MOF/20110701"/>
+									<namespace uid="http://www.omg.org/spec/XMI/20110701"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="3" expanded="1">
+								<entry name="document" ns="3" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="XMI" ns="2" expanded="1">
+										<entry name="packagedElement" expanded="1">
+											<entry name="packagedElement" expanded="1">
+												<entry name="packagedElement" expanded="1"/>
+											</entry>
+										</entry>
+										<entry name="Tag" ns="1">
+											<entry name="element" expanded="1"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="MOF.xsd" inputinstance="MOF.xml" outputinstance="MOF.xml" instanceroot="{http://www.omg.org/spec/XMI/20110701}XMI"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="SequenceDiagramSchema" library="xml" uid="4" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="40" rbx="231" rby="537"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://tempuri.org/CommentsSchema.xsd"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="2" expanded="1">
+								<entry name="document" ns="2" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="comments" ns="1" outkey="4" expanded="1">
+										<entry name="step" ns="1" outkey="5" expanded="1">
+											<entry name="step" ns="1" outkey="6" expanded="1">
+												<entry name="callingClass" type="attribute" outkey="10"/>
+												<entry name="targetClass" type="attribute" outkey="11"/>
+												<entry name="returnType" type="attribute" outkey="16"/>
+												<entry name="stepType" type="attribute" outkey="17"/>
+												<entry name="parameters" ns="1" expanded="1">
+													<entry name="parameter" ns="1" expanded="1"/>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="SequenceDiagramSchema.xsd" outputinstance="SequenceDiagramSchema.xml" instanceroot="{http://tempuri.org/CommentsSchema.xsd}comments"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="TestSequenceDiagram" library="xml" uid="7" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="426" lty="-10" rbx="813" rby="433"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace uid="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="SequenceDesignerModel" expanded="1">
+										<entry name="profileInstances">
+											<entry name="packageHasProfileInstances" expanded="1"/>
+										</entry>
+										<entry name="packagedElements" expanded="1">
+											<entry name="packageHasNamedElement" expanded="1">
+												<entry name="interaction" inpkey="1" expanded="1">
+													<entry name="lifelines" expanded="1">
+														<entry name="lifeline" inpkey="12" expanded="1">
+															<entry name="elementDefinition" expanded="1"/>
+															<entry name="represents" expanded="1">
+																<entry name="propertyMoniker" expanded="1"/>
+															</entry>
+															<entry name="topLevelOccurrences" expanded="1">
+																<entry name="executionOccurrenceSpecificationMoniker" expanded="1"/>
+																<entry name="messageOccurrenceSpecificationMoniker" expanded="1"/>
+															</entry>
+														</entry>
+														<entry name="lifeline" inpkey="13" expanded="1" clone="1"/>
+													</entry>
+													<entry name="messages" inpkey="2" expanded="1">
+														<entry name="message" inpkey="3" expanded="1">
+															<entry name="sendEvent" inpkey="18"/>
+															<entry name="receiveEvent" inpkey="19" expanded="1">
+																<entry name="messageOccurrenceSpecificationMoniker" expanded="1"/>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="TestSequenceDiagram.xsd" inputinstance="TestSequenceDiagram.xml" outputinstance="TestSequenceDiagram.xml" instanceroot="{http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner}SequenceDesignerModel"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="4">
+						<edges>
+							<edge vertexkey="1" edgekey="7"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="5">
+						<edges>
+							<edge vertexkey="2" edgekey="8"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="6">
+						<edges>
+							<edge vertexkey="3" edgekey="9"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="10">
+						<edges>
+							<edge vertexkey="12" edgekey="14"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="11">
+						<edges>
+							<edge vertexkey="13" edgekey="15"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="16">
+						<edges>
+							<edge vertexkey="19" edgekey="20"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="17">
+						<edges>
+							<edge vertexkey="18" edgekey="21"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

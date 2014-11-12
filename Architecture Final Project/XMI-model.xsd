@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.omg.org/spec/XMI/20110701" xmlns:mofext="http://www.omg.org/spec/MOF/20110701" xmlns:uml="http://www.omg.org/spec/UML/20110701" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:import namespace="http://www.omg.org/spec/UML/20110701" schemaLocation="XMI-model1.xsd"/>
+	<xs:import namespace="http://www.omg.org/spec/MOF/20110701" schemaLocation="XMI-model3.xsd"/>
+	<xs:attribute name="type" type="xs:string"/>
+	<xs:attribute name="idref" type="xs:string"/>
+	<xs:attribute name="id" type="xs:string"/>
+	<xs:element name="XMI">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="uml:Package"/>
+				<xs:element ref="mofext:Tag" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
