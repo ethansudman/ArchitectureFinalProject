@@ -56,8 +56,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Connection.cs" />
-    <Compile Include="Connections\AccessConnection.cs" />
-    <Compile Include="Providers\ExcelProvider.cs" />
+    <Compile Include="Connections\Access\AccessConnection.cs" />
+    <Compile Include="Providers\XML\ExcelProvider.cs" />
     <Compile Include="ITextProducer.cs" />
     <Compile Include="IImageProducer.cs" />
     <Compile Include="Providers\AccessProvider.cs" />
@@ -107,10 +107,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database1.mdb">
+    <Content Include="Connections\Access\Database1.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

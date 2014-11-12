@@ -13,6 +13,11 @@ namespace Requirements_Application
     {
         public override string ToolName
         {
+            get { return "Excel"; }
+        }
+
+        public override string Name
+        {
             get { throw new NotImplementedException(); }
         }
     }

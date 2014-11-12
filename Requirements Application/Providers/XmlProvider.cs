@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Requirements_Application.Providers
+namespace Requirements_Application
 {
     class XmlProvider
     {
