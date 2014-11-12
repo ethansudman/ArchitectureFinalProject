@@ -18,10 +18,20 @@ namespace Requirements_Application
 
         public abstract string ToolName { get; }
 
+        public abstract string Name { get; }
+
         /// <summary>
         /// Factory to get a <see cref="Connection"/> to the underlying provider
         /// </summary>
         /// <returns></returns>
         abstract protected Connection ConnectToTool();
+
+        public virtual bool Check()
+        {
+            // todo: ??
+            var connection = ConnectToTool();
+
+            return false;
+        }
     }
 }
