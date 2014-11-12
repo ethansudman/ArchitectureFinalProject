@@ -10,8 +10,6 @@ namespace Requirements_Application
     {
         public int RequirementNumber { get; set; }
 
-        public string Tool { get; set; }
-
         public bool FullyFulfills { get; set; }
 
         public abstract string Description { get; }
