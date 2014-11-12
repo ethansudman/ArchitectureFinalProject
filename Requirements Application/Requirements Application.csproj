@@ -61,7 +61,9 @@
     <Compile Include="ITextProducer.cs" />
     <Compile Include="IImageProducer.cs" />
     <Compile Include="Providers\AccessProvider.cs" />
-    <Compile Include="Providers\XmlProvider.cs" />
+    <Compile Include="Providers\XmlProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="TemporaryFactory.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
