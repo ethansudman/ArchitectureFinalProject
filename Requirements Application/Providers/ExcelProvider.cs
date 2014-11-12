@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Requirements_Application
 {
-    class ExcelProvider
+    public class ExcelProvider : Map
     {
     }
 }
