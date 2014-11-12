@@ -55,7 +55,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Connection.cs" />
     <Compile Include="Connections\Access\AccessConnection.cs" />
     <Compile Include="Providers\XML\ExcelProvider.cs" />
     <Compile Include="ITextProducer.cs" />
