@@ -14,6 +14,12 @@ namespace Requirements_Application
 
         public bool FullyFulfills { get; set; }
 
+        public abstract string Description { get; }
+
+        public abstract string ToolName { get; }
+
+        public abstract string Name { get; }
+
         /// <summary>
         /// Factory to get a <see cref="Connection"/> to the underlying provider
         /// </summary>
@@ -22,9 +28,10 @@ namespace Requirements_Application
 
         public virtual bool Check()
         {
+            // todo: ??
             var connection = ConnectToTool();
 
-            connection.Query();
+            return false;
         }
     }
 }
