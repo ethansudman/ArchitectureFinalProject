@@ -12,6 +12,12 @@ namespace Requirements_Application
 {
     public class AccessProvider : Map
     {
+        private OleDbConnection GetConnection()
+        {
+            var connStr = ConfigurationManager.ConnectionStrings["Access"].ConnectionString;
+            return new OleDbConnection(connStr);
+        }
+
         protected override Connection ConnectToTool()
         {
             throw new NotImplementedException();
@@ -19,8 +25,27 @@ namespace Requirements_Application
 
         public override string Name
         {
-            get { throw new NotImplementedException(); }
-        }
+            get
+            {
+                using (var conn = GetConnection())
+                {
+                    conn.Open();
+
+                    using (var command = conn.CreateCommand())
+                    {
+                        command.Parameters.AddWithValue("@ID", RequirementNumber);
+
+                        // TOP(1) is just a hint to the query engine for optimization, the ID will only match 1 row anyway
+                        command.CommandText =
+                            @"SELECT TOP(1) Name
+                              FROM RequirementTable
+                              WHERE ID = @ID";
+
+                        return command.ExecuteScalar() as string;
+                    } // Dispose of command
+                } // Dispose of DB connection
+            } // End get
+        } // End property Name
 
         public override string ToolName
         {
@@ -32,7 +57,26 @@ namespace Requirements_Application
         /// </summary>
         public override string Description
         {
-            get { throw new NotImplementedException(); }
-        }
+            get
+            {
+                using (var conn = GetConnection())
+                {
+                    conn.Open();
+
+                    using (var command = conn.CreateCommand())
+                    {
+                        command.Parameters.AddWithValue("@ID", RequirementNumber);
+
+                        // TOP(1) is just a hint to the query engine for optimization, the ID will only match 1 row anyway
+                        command.CommandText =
+                            @"SELECT TOP(1) Description
+                              FROM RequirementTable
+                              WHERE ID = @ID";
+
+                        return command.ExecuteScalar() as string;
+                    } // Dispose of command
+                } // Dispose of DB connection
+            } // End get
+        } // End property Description
     }
 }
