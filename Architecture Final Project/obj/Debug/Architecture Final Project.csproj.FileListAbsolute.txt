@@ -1,7 +1,6 @@
 E:\My Documents\Visual Studio 2012\Projects\Architecture Final Project\Architecture Final Project\bin\Debug\Architecture Final Project.exe.config
 E:\My Documents\Visual Studio 2012\Projects\Architecture Final Project\Architecture Final Project\bin\Debug\Architecture Final Project.exe
 E:\My Documents\Visual Studio 2012\Projects\Architecture Final Project\Architecture Final Project\bin\Debug\Architecture Final Project.pdb
-E:\My Documents\Visual Studio 2012\Projects\Architecture Final Project\Architecture Final Project\obj\Debug\Architecture Final Project.csprojResolveAssemblyReference.cache
 E:\My Documents\Visual Studio 2012\Projects\Architecture Final Project\Architecture Final Project\obj\Debug\MainWindow.baml
 E:\My Documents\Visual Studio 2012\Projects\Architecture Final Project\Architecture Final Project\obj\Debug\MainWindow.g.cs
 E:\My Documents\Visual Studio 2012\Projects\Architecture Final Project\Architecture Final Project\obj\Debug\App.g.cs

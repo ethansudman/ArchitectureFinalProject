@@ -11,3 +11,7 @@ E:\My Documents\Visual Studio 2012\Projects\Architecture Final Project\Requireme
 E:\My Documents\Visual Studio 2012\Projects\Architecture Final Project\Requirements Application\obj\Debug\Requirements Application.csproj.GenerateResource.Cache
 E:\My Documents\Visual Studio 2012\Projects\Architecture Final Project\Requirements Application\obj\Debug\Requirements Application.exe
 E:\My Documents\Visual Studio 2012\Projects\Architecture Final Project\Requirements Application\obj\Debug\Requirements Application.pdb
+E:\My Documents\Visual Studio 2012\Projects\Architecture Final Project\Requirements Application\obj\Debug\Requirements Application_Content.g.cs
+E:\My Documents\Visual Studio 2012\Projects\Architecture Final Project\Requirements Application\obj\Debug\Requirements Application.csproj.ResolveComReference.cache
+E:\My Documents\Visual Studio 2012\Projects\Architecture Final Project\Requirements Application\bin\Debug\Providers\Access\Database1.mdb
+E:\My Documents\Visual Studio 2012\Projects\Architecture Final Project\Requirements Application\bin\Debug\Providers\Excel\Sample.xls
