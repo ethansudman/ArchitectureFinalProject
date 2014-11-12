@@ -57,10 +57,11 @@
     </ApplicationDefinition>
     <Compile Include="Connection.cs" />
     <Compile Include="Connections\AccessConnection.cs" />
-    <Compile Include="ITextProducer.cs" />
     <Compile Include="Providers\ExcelProvider.cs" />
+    <Compile Include="ITextProducer.cs" />
     <Compile Include="IImageProducer.cs" />
     <Compile Include="Providers\AccessProvider.cs" />
+    <Compile Include="Providers\XmlProvider.cs" />
     <Compile Include="TemporaryFactory.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
