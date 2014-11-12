@@ -20,28 +20,29 @@ namespace Requirements_Application
     {
         private string _name, _desc;
 
-        public ExcelProvider()
+        public void Init()
         {
             Application app = new Application();
 
-            string excelFile = ConfigurationManager.AppSettings["ExcelFile"];
-            Workbook workbook = app.Workbooks.Open(excelFile);
+            // TODO: use the config version
+            //string excelFile = ConfigurationManager.AppSettings["ExcelFile"];
+            Workbook workbook = app.Workbooks.Open(@"E:\My Documents\Visual Studio 2012\Projects\Architecture Final Project\Requirements Application\Providers\Excel\Sample.xls");
             Worksheet sheet = workbook.ActiveSheet;
             //sheet.
 
-            for (int i = 1; i < sheet.Rows.Count; i++)
+            for (int i = 2; i <= sheet.Rows.Count; i++)
             {
                 // Obviously I'm making some assumptions about what the file will look like here
-                var range = sheet.Rows[i, 0] as Range;
-                if (range.Value2.Trim().Equals(RequirementNumber.ToString()))
+                var range = sheet.Cells[i, 1] as Range;
+                if (range.Value == RequirementNumber)
                 {
-                    _name = sheet.Rows[i, 1];
-                    _desc = sheet.Rows[i, 2];
+                    _name = sheet.Cells[i, 2].Value2;
+                    _desc = sheet.Cells[i, 3].Value2;
                     break;
                 }
 
-                // TODO: do I need this?
-                //releaseObject(range);
+                // If we don't do this we'll have background processes left after we quit
+                releaseObject(range);
             }
 
             releaseObject(sheet);
