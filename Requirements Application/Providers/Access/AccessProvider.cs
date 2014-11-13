@@ -10,7 +10,7 @@ using System.Configuration;
 
 namespace Requirements_Application
 {
-    public class AccessProvider : Map
+    public class AccessProvider : Requirement
     {
         private OleDbConnection GetConnection()
         {
