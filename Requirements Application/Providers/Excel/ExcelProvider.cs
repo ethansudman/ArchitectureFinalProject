@@ -16,7 +16,31 @@ namespace Requirements_Application
     /// <summary>
     /// Provider for an Excel spreadsheet
     /// </summary>
-    public class ExcelProvider : Map
+    /// 
+    /// <remarks>
+    /// This implements access to a generic requirements Excel spreadsheet meeting certain specifications.
+    /// 
+    /// In the future, remove hardcoded values for column names and allow XML mapping.
+    /// </remarks>
+    /// 
+    /// <comments>
+    ///     <sequence>
+    ///         <step number="1" actor="User" targetClass="MainWindow" method="Click" returnType="Requirement"/>
+    ///         <step number="2" callingClass="MainWindow" targetClass="TemporaryFactory" method="GetMap" returnName="" returnType="Requirement"/>
+    ///         <!-- Constructor call - equivalent to a Create message -->
+    ///         <step number="3" callingClass="TemporaryFactory" targetClass="ExcelProvider" method="ExcelProvider()" returnName="" returnType=""/>
+    ///         <!-- Note the difference here; here we're just calling a void method -->
+    ///         <!-- It may seem a little strange to have a return type of "void;" this is somewhat programming-language dependent but this is actually typical for many functional languages -->
+    ///         <step number="4" callingClass="TemporaryFactory" targetClass="ExcelProvider" method="Init" returnName="" returnType="void"/>
+    ///     </sequence>
+    ///     
+    ///     <!-- Tool name/details are registered separately in the configuration file -->
+    ///     <requirement RequirementNumber="1" FullyFulfills="true"/>
+    ///     
+    ///     <!-- Details on use case location/tools are listed in the configuration -->
+    ///     <useCase Number="1"/>
+    /// </comments>
+    public class ExcelProvider : Requirement
     {
         private string _name, _desc;
 
@@ -24,9 +48,9 @@ namespace Requirements_Application
         {
             Application app = new Application();
 
-            // TODO: use the config version
-            //string excelFile = ConfigurationManager.AppSettings["ExcelFile"];
-            Workbook workbook = app.Workbooks.Open(@"E:\My Documents\Visual Studio 2012\Projects\Architecture Final Project\Requirements Application\Providers\Excel\Sample.xls");
+            string excelFile = ConfigurationManager.AppSettings["ExcelFile"];
+            Workbook workbook = app.Workbooks.Open(excelFile);
+            //Workbook workbook = app.Workbooks.Open(@"E:\My Documents\Visual Studio 2012\Projects\Architecture Final Project\Requirements Application\Providers\Excel\Sample.xls");
             Worksheet sheet = workbook.ActiveSheet;
             //sheet.
 
