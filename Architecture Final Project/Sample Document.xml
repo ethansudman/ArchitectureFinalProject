@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <comments xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="SequenceDiagramSchema.xsd">
   <sequence>
-    <!-- See fig_53... to see what this looks like -->
+      <!-- See fig_53... to see what this looks like -->
     <!-- Either "method" or "text" -->
-    <step number="1" callingClass="customer" targetClass="ATM" method="putInCard" returnType="void"/>
+    <step number="1" callingClass="customer" targetClass="ATM" method="putInCard" returnName="return" returnType="void"/>
     
     <!-- The "parameters" tag here is for possible future expansion -->
-    <step number="2" callingClass="ATM" targetClass="Server" method="checkCard" returnType="bool">
+    <step number="2" callingClass="ATM" targetClass="Server" method="checkCard" returnName="return" returnType="bool">
       <parameters>
         <parameter name="cardsData" type="class" classReference="CardDataStruct"/>
       </parameters>
