@@ -9,7 +9,7 @@ namespace Requirements_Application
     // For now use a factory, use DI later
     public class TemporaryFactory
     {
-        public Map GetMap(string provider)
+        public Requirement GetMap(string provider)
         {
             // Should do other checks
 
