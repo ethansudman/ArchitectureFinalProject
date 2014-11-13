@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Requirements_Application
 {
-    abstract public class Map
+    /// <summary>
+    /// Abstract base class for connections to requirements managers
+    /// </summary>
+    abstract public class Requirement
     {
         public int RequirementNumber { get; set; }
 
