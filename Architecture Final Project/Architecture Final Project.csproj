@@ -84,6 +84,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="MealyMachine.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="SequenceDiagramSchema.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -104,6 +107,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="TestSequenceDiagram.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MealyMachine.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
