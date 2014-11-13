@@ -29,7 +29,13 @@
             </xs:element>
           </xs:choice>
           <xs:attribute name="number" type="xs:int" use="required"/>
-          <xs:attribute name="callingClass" use="required" type="xs:string"/>
+
+          <xs:attribute name="name" type="xs:string"/>
+          
+          <!-- Technically it should be a choice between callingClass and actor (i.e. at least one's required) but that's a bit tricky to represent -->
+          <xs:attribute name="callingClass" use="optional" type="xs:string"/>
+          <xs:attribute name="actor" use="optional" type="xs:string"/>
+          
           <xs:attribute name="targetClass" use="required" type="xs:string"/>
           <xs:attribute name="returnType" use="required" type="xs:string"/>
           
