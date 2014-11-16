@@ -20,5 +20,7 @@ namespace Requirements_Application
         public abstract string ToolName { get; }
 
         public abstract string Name { get; }
+
+        public abstract bool UpdateProvider();
     }
 }

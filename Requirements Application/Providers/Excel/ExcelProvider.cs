@@ -44,6 +44,17 @@ namespace Requirements_Application
     {
         private string _name, _desc;
 
+        public ExcelProvider()
+        {
+            Init();
+        }
+
+        public override bool UpdateProvider()
+        {
+            // This implementation is not shown for this provider; see the Access Provider for an example
+            throw new NotImplementedException();
+        }
+
         public void Init()
         {
             Application app = new Application();

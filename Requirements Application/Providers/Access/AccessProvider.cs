@@ -18,6 +18,33 @@ namespace Requirements_Application
             return new OleDbConnection(connStr);
         }
 
+        public override bool UpdateProvider()
+        {
+            using (var conn = GetConnection())
+            {
+                conn.Open();
+
+                using (var command = conn.CreateCommand())
+                {
+                    command.Parameters.AddWithValue("@ID", RequirementNumber);
+                    command.Parameters.AddWithValue("@name", Name);
+                    command.Parameters.AddWithValue("@description", Description);
+                    command.Parameters.AddWithValue("@fullyFulfilled", FullyFulfills);
+
+                    command.CommandText =
+                        @"UPDATE RequirementTable
+                          SET Name = @name,
+                              FullyFulfilled = @fullyFulfilled,
+                              Description = @description
+                          WHERE ID = @ID";
+
+                    command.ExecuteNonQuery();
+
+                    return true;
+                } // Dispose of command
+            } // Dispose of DB connection
+        }
+
         public override string Name
         {
             get
