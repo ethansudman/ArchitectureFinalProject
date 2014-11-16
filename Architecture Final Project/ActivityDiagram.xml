@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- This is based on the digram here: http://msdn.microsoft.com/en-us/library/dd409360.aspx -->
+<Activity>
+  <!-- There are Accepting,  -->
+  <InitialNode Name="InitialNode"/>
+
+  <ControlFlow FirstItem="InitialNode" SecondItem="ChooseMenu"/>
+
+  <Action Name="ChooseMenu" Text="Choose Menu"/>
+
+  <Comment AssociatedObject="ChooseMenu" Text="Each Order contains items from only one Menu"/>
+
+  <MergeNode Name="Merge">
+    <Item Name="ChooseMenu"/>
+    <Item Name="CustomerChoses"/>
+  </MergeNode>
+
+  <Action Name="ChooseMenuItem" Text="Choose Menu Item"/>
+
+  <ControlFlow FirstItem="ChooseMenuItem" SecondItem="DecideToChoose"/>
+  
+  <Choice Name="DecideToChoose" TrueCase="ChooseMenuItem">
+    <GuardCondition Name="CustomerFinishedChoosing" TrueText="Customer Finished Choosing" FalseText="Customer wants to choose more"/>
+  </Choice>
+
+  <Action Name="ConfirmOrder" Text="Confirm Order"/>
+
+  <ControlFlow FirstItem="ConfirmOrder" SecondItem="Accepts"/>
+  
+  <AcceptingNode Name="Accepts"/>
+</Activity>
