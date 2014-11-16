@@ -84,6 +84,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="ActivityDiagram.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="MealyMachine.xsd">
       <SubType>Designer</SubType>
     </None>

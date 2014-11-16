@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ActivityDiagram"
+    targetNamespace="http://tempuri.org/ActivityDiagram.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/ActivityDiagram.xsd"
+    xmlns:mstns="http://tempuri.org/ActivityDiagram.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:attribute name="Name" type="xs:string"/>
+  <xs:attribute name="Text" type="xs:string"/>
+
+  <xs:complexType name="CommentType">
+    <xs:attribute name="AssociatedObject" type="xs:string" use="required"/>
+    <xs:attribute ref="Text" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="InitialNodeType">
+    <xs:attribute ref="Name" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="ActionType">
+    <xs:attribute ref="Name" use="required"/>
+    <xs:attribute ref="Text" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="MergeNode">
+    <xs:sequence>
+      <xs:element name="Item" minOccurs="2" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:attribute ref="Name" use="required"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+
+    <xs:attribute ref="Name" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="ControlFlowType">
+    <xs:attribute name="FirstItem" type="xs:string" use="required"/>
+    <xs:attribute name="SecondItem" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="ChoiceType">
+    <xs:sequence>
+      <xs:element name="GuardCondition">
+        <xs:complexType>
+          <xs:attribute ref="Name" use="required"/>
+          <xs:attribute name="TrueText" type="xs:string" use="required"/>
+          <xs:attribute name="FalseText" type="xs:string" use="required"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    
+    <xs:attribute ref="Name" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="AcceptingNodeType">
+    <xs:attribute ref="Name" use="required"/>
+  </xs:complexType>
+  
+  <xs:element name="Activity">
+    <xs:complexType>
+      <!-- We need at least one element -->
+      <xs:choice minOccurs="1" maxOccurs="unbounded">
+        <!-- Obviously there must be an initial node but there can't be any more than one -->
+        <xs:element name="InitialNode" type="InitialNodeType" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="Comment" type="CommentType" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="Action" type="ActionType" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="Merge" type="MergeNode" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="ControlFlow" type="ControlFlowType" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="Choice" type="ChoiceType" minOccurs="0" maxOccurs="unbounded"/>
+        <!-- We need at least one accepting node -->
+        <xs:element name="AcceptingNode" type="AcceptingNodeType" minOccurs="1" maxOccurs="unbounded"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

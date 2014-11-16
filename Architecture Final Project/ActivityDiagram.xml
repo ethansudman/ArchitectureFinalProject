@@ -19,7 +19,7 @@
 
   <ControlFlow FirstItem="ChooseMenuItem" SecondItem="DecideToChoose"/>
   
-  <Choice Name="DecideToChoose" TrueCase="ChooseMenuItem">
+  <Choice Name="DecideToChoose" TrueCase="ChooseMenuItem" FalseCase="Merge">
     <GuardCondition Name="CustomerFinishedChoosing" TrueText="Customer Finished Choosing" FalseText="Customer wants to choose more"/>
   </Choice>
 
