@@ -2,14 +2,14 @@
 <StateMachine>
   <State name="Default">
     <Transitions>
-      <Transition Trigger="CAPS_LOCK" Method="TurnCapsOn()" Output="" NewState="CAPS_LOCKED"/>
+      <Transition Trigger="CAPS_LOCK" Method="TurnCapsOn()" Output="ON" NewState="CAPS_LOCKED"/>
     </Transitions>
   </State>
 
   <State name="CAPS_LOCKED">
     <Transitions>
-      <!-- [] is code for a "special" word -->
-      <Transition Trigger="[ALL]" NewState="CAPS_LOCKED"/>
+      <!-- [] is code for a "special" word. Basically, this means that ALL  -->
+      <Transition Trigger="[ALL]" NewState="CAPS_LOCKED" GuardCondition="[SHIFT] == OFF"/>
     </Transitions>
   </State>
   <Trigger Name="CAPS_LOCK" InputSource="Keyboard" Description="Turn on"/>
